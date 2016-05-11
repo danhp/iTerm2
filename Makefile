@@ -25,7 +25,7 @@ install: | Deployment backup-old-iterm
 
 Development:
 	echo "Using PATH for build: $(PATH)"
-	xcodebuild -parallelizeTargets -target iTerm2 -configuration Development && \
+	xcodebuild -parallelizeTargets -target iTerm2 -configuration Development CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO && \
 	chmod -R go+rX build/Development
 
 Dep:
